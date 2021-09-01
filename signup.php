@@ -18,20 +18,18 @@
             $conn=new mysqli('localhost','root',"",'society');
 
             if (isset($_REQUEST['submit'])){
+               
                 $email=$_REQUEST['txtEmail'];
                 $profile=$_REQUEST['txtProfile'];
                 $password=$_REQUEST['txtPassword'];
-
+                
+                
                 $sql="INSERT INTO friends (ProName,Email,Pword) values ('$profile','$email','$password')";
+                $make_table="CREATE TABLE $profile (Friends char(20))";
 
-                $result=$conn->query($sql);
-
-                if ($result)
-                {
-                    echo "<br><br>Registration Success";
-                }else{
-                    echo "error...";
-                }
+                $result1=$conn->query($sql);
+                $result2=$conn->query($make_table);
+                header('Location:index.php');
             }
     
         ?>

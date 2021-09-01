@@ -26,13 +26,19 @@
                     while($row=$result2->fetch_array()){
                         $E=$row['Email'];
                         $P=$row['Pword'];
+                        $profile=$row['ProName'];
                         if($E==$email && $P==$password){
                             echo "success";
+                            session_start();
+                            $_SESSION['p_name']=$profile;
+                            $_SESSION['e_mail']=$E;
+                            header('Location:friendlist.php');
                             break;
                         }
                         
                     }
                 }
+                
                 
             }
     
