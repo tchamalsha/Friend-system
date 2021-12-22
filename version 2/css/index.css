@@ -1,0 +1,52 @@
+.titles{
+    text-align: center;
+}
+.main-title{
+    font-family: 'Caveat', cursive;
+    font-weight: 800;
+    color: rgb(82, 79, 82);
+    font-size: 10vh;
+}
+.sub-title{
+    color: #d593f0;
+    font-family: 'Twinkle Star', cursive;
+    font-size: 4vh;
+    font-weight: 700;
+}
+body{
+    background-image: url("5621334.jpg");
+    background-size: cover;
+}
+.sign-up{
+    background-color: #C9CBFF;
+    opacity: 0.8;
+    border-radius: 10%;
+    padding: 3%;
+}
+.sign-up h5{
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Source Code Pro', monospace;
+    color: #6f6f72;
+}
+.forms button{
+    background-color:#A6A9B6 ;
+    border: #A6A9B6;
+    
+}
+.forms button:hover{
+    background-color:#6f6f72 ;
+}
+.login{
+    background-color: #FFE5B9;
+    border-radius: 5%;
+    opacity: 0.8;
+    padding: 3%;
+    height: fit-content;
+}
+.login h5{
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Source Code Pro', monospace;
+    color: #6f6f72;
+}
