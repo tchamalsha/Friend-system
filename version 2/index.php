@@ -25,43 +25,43 @@
         <div class="row pt-4 align-items-center">
             <div class="col-md-5 sign-up">
                 <h5 class="mb-4">Sign up here!</h5>
-                <form action="">
+                <form action="php/connect.php" method="post" name="sign-up-form">
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="Name" placeholder="name@example.com">
+                        <input type="text" class="form-control" name="txtName" placeholder="name@example.com">
                         <label for="Name">Name</label>
                     </div>
                     <div class="form-floating mb-2 ">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input type="email" class="form-control" name="email" placeholder="name@example.com">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="form-floating mb-2">
-                        <input type="text" class="form-control" id="number" placeholder="name@example.com">
-                        <label for="floatingInput">Mobile Number</label>
+                        <input type="text" class="form-control" name="number" placeholder="name@example.com">
+                        <label for="floatingInput">Contact Number</label>
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button class="btn btn-primary me-md-2" type="button">Sign up</button>
-                        <button class="btn btn-primary" type="button">Clear</button>
+                        <button class="btn  me-md-2" type="submit" name="submitSignup">Sign up</button>
+                        <button class="btn " type="button">Clear</button>
                     </div>
                 </form>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-5 login">
                 <h5 class="mb-4">Login here!</h5>
-                <form action="">
+                <form action="php/connect.php" method="post">
                     <div class="form-floating mb-2 ">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input type="email" class="form-control" name="loginEmail" placeholder="name@example.com">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control" name="loginPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button class="btn btn-primary me-md-2" type="button">Login</button>
+                        <button class="btn me-md-2" type="submit" name="submitLogin">Login</button>
                     </div>
                 </form>
             </div>
