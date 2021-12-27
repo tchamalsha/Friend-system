@@ -1,6 +1,10 @@
 <?php
 
-    $connection = new mysqli('localhost','root','','reachme');
+    $host="localhost";
+    $userName="root";
+    $password="";
+    $database="reachme";
+    $connection = new mysqli($host,$userName,$password,$database);
 
 
 ?>

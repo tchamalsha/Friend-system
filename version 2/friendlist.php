@@ -20,15 +20,44 @@
         <h1 class="main-title">ReachMe</h1>
         <h2 class="sub-title">Connect with your loved ones</h2>
 
-        <a href="friendlist.php"><button class="btn me-md-2" type="submit" name="submitLogin">friendlist</button>
-        <a href="profileEdit.php"><button class="btn me-md-2" type="submit" name="submitLogin">profile edit</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Add</th>
+                </tr>
+            </thead>
+            <tbody>
+               <?php
+                    include("php/sqlConnection.php");
+                    $sqlSelect="SELECT * FROM users";
+
+                    $result=$connection->query($sqlSelect);
+
+                    foreach($result as $row){
+
+                        echo "<tr>
+                            <td>".$row['ID']."</td>
+                            <td>".$row['Name']."</td>
+                            <td><button class='btn me-md-2' type='submit' name='addFriend'>Add me</button></td>
+                        </tr>";
+                    }
+
+               ?>
+            </tbody>
+        </table>
     </div>
 
 
     
-
+    
+    
     <!--Scripts-->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
+
+

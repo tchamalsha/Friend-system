@@ -1,6 +1,6 @@
 <?php
     $connection = new mysqli('localhost','root',"",'reachme');
-
+   
     if(isset ($_REQUEST['submitSignup'])){
         $name = $_REQUEST['txtName'];
         $email= $_REQUEST['email'];
@@ -37,4 +37,9 @@
         echo 'not';
     }
    }
+
+
+   
 ?>
+
+

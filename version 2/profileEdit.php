@@ -18,10 +18,24 @@
 <body>
     <div class="container titles mt-3">
         <h1 class="main-title">ReachMe</h1>
-        <h2 class="sub-title">Connect with your loved ones</h2>
+        <h2 class="sub-title">Let's See your profile</h2>
 
-        <a href="friendlist.php"><button class="btn me-md-2" type="submit" name="submitLogin">friendlist</button>
-        <a href="profileEdit.php"><button class="btn me-md-2" type="submit" name="submitLogin">profile edit</button>
+        <div class="container mb-3">
+            <form action="">
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                </div>
+            </form>
+        </div>    
     </div>
 
 

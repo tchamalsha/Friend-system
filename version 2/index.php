@@ -25,13 +25,13 @@
         <div class="row pt-4 align-items-center">
             <div class="col-md-5 sign-up">
                 <h5 class="mb-4">Sign up here!</h5>
-                <form action="php/connect.php" method="post" name="sign-up-form">
+                <form action="php/connect.php" method="post" name="sign-up-form" onsubmit="return validate()">
                     <div class="form-floating mb-2">
                         <input type="text" class="form-control" name="txtName" placeholder="name@example.com">
                         <label for="Name">Name</label>
                     </div>
                     <div class="form-floating mb-2 ">
-                        <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                        <input type="email" class="form-control"  id="txtEmail" name="email" placeholder="name@example.com">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="form-floating mb-2">
@@ -39,7 +39,7 @@
                         <label for="floatingInput">Contact Number</label>
                     </div>
                     <div class="form-floating mb-4">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control"  id="txtPassword" name="password" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -67,8 +67,9 @@
             </div>
         </div>
     </div>
-
+    
     <!--Scripts-->
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
