@@ -1,18 +1,22 @@
 <?php
-    $connection = new mysqli('localhost','root',"",'reachme');
+    $connection = new mysqli('localhost','bookbae',"",'reachme');
    
     if(isset ($_REQUEST['submitSignup'])){
         $name = $_REQUEST['txtName'];
         $email= $_REQUEST['email'];
         $contact=$_REQUEST['number'];
         $password=$_REQUEST['password'];
+        echo $name;
+        echo $email;
+        echo $contact;
+        echo $password;
 
         $sqlInsert="INSERT INTO users (Name,Email,Contact,Password) VALUES ('$name','$email',$contact,'$password')";
 
         $result=$connection->query($sqlInsert);
         if($result){
             echo "done";
-            header('Location:../index.php');
+            header('Location:../profile.php');
         }else{
             echo "not";
         }
