@@ -1,9 +1,10 @@
 <?php
 
     $host="localhost";
-    $userName="root";
+    $userName="bookbae";
     $password="";
     $database="reachme";
+    
     $connection = new mysqli($host,$userName,$password,$database);
 
 

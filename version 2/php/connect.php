@@ -1,5 +1,6 @@
 <?php
-    $connection = new mysqli('localhost','bookbae',"",'reachme');
+
+    include 'helper.php';
    
     if(isset ($_REQUEST['submitSignup'])){
         $name = $_REQUEST['txtName'];
@@ -13,7 +14,7 @@
 
         $sqlInsert="INSERT INTO users (Name,Email,Contact,Password) VALUES ('$name','$email',$contact,'$password')";
 
-        $result=$connection->query($sqlInsert);
+        $result=update($sqlInsert);
         if($result){
             echo "done";
             header('Location:../profile.php');
@@ -31,9 +32,7 @@
     
     $sqlSelect="SELECT * FROM users where Email=\"$logEmail\"";
 
-    $userArray=$connection->query($sqlSelect);
-
-    $user=$userArray->fetch_array();
+    $user=execute($sqlSelect);
     
     if($logPassword=$user['Password']){
         header('Location:../profile.php');

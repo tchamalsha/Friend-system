@@ -31,16 +31,23 @@
             <tbody>
                <?php
                     include("php/sqlConnection.php");
-                    $sqlSelect="SELECT * FROM users";
+                    include 'php/helper.php';
 
-                    $result=$connection->query($sqlSelect);
+                    $logEmail="manjula@gmail.com";
+                    $sqlSelect="SELECT * FROM users WHERE Email!=\"$logEmail\"";
+                    
+                    $result=update($sqlSelect);
 
+                    $count=0;
                     foreach($result as $row){
 
+                        $count++;
+                        $friendEmail=$row['Email'];
+
                         echo "<tr>
-                            <td>".$row['ID']."</td>
+                            <td>".$count."</td>
                             <td>".$row['Name']."</td>
-                            <td><button class='btn me-md-2' type='submit' name='addFriend'>Add me</button></td>
+                            <td><a href='php/addFriend.php?email=$friendEmail'><button class='btn' type='submit' name='addFriend'>Add me</button></form></td>
                         </tr>";
                     }
 
